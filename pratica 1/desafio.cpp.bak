@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main(){
+	int cpf, d1, d2, d3, d4, d5, d6, d7, d8, d9;
+	
+	printf("CPF - sem digitio verificador: ");
+	scanf("%d",&cpf);
+
+	d1 = cpf/1000000000; //encontra  o ultimo digito
+	
+	d2 = cpf / 10000000; // encontra o ultimo digito junto com o penultimo (15)
+	d2 = d2 % 10; // retira o primeiro digito e encontramos so o penultimo 
+	
+	d3 = cpf / 1000000; // encontra os tres ultimos (157)
+	d3 = d3 % 100; // (57)
+	d3 = d3 % 10; //(7)
+	
+	d4 = cpf / 100000; // encontra os 4 ultimos digitos
+	d4 = d4 % 1000; // (578)
+	d4 = d4 % 100; // (78)
+	d4 = d4 % 10; // (8)
+	
+	d5 = cpf / 10000; // encontra os 5 ultimos digitos (15785)
+	d5 = d5 % 10000; //(15785)
+	d5 = d5 % 1000; // (5785)
+	d5 = d5 % 100; // (785)
+	d5 = d5 % 10; // (85)
+	
+	d5 = cpf / 1000; // encontra os 6 ultimos digitos (157850)
+	d5 = d5 % 100000; // (57850)
+	d5 = d5 % 10000; //(57850)
+	d5 = d5 % 1000; // (7850)
+	d5 = d5 % 100; // (850)
+	d5 = d5 % 10; // (50)
+	
+	d6 = cpf / 100; // encontra os 7 ultimos digitos (1578504)
+	d6 = d6 % 1000000 //(578504) 
+	d6 = d6 % 100000; //(78504)
+	d6 = d6 % 10000; //(78504)
+	d6 = d6 % 1000; // (8504)
+	d6 = d6 % 100; // (504)
+	d6 = d6 % 10; // (04)
+	
+	d6 = cpf / 100; // encontra os 7 ultimos digitos (1578504)
+	d6 = d6 % 1000000 //(578504) 
+	d6 = d6 % 100000; //(78504)
+	d6 = d6 % 10000; //(78504)
+	d6 = d6 % 1000; // (8504)
+	d6 = d6 % 100; // (504)
+	d6 = d6 % 10; // (04)
+	
+	printf("%d",d4);
+	
+return 0;
+}
